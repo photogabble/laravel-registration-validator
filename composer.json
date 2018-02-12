@@ -1,0 +1,42 @@
+{
+  "name": "photogabble/laravel-registration-validator",
+  "type": "library",
+  "description": "Laravel validation extensions for validating registration credentials.",
+  "keywords": [
+    "laravel",
+    "auth",
+    "validation",
+    "credentials",
+    "username",
+    "email"
+  ],
+  "support": {
+    "issues": "https://github.com/photogabble/laravel-registration-validator/issues",
+    "source": "https://github.com/photogabble/laravel-registration-validator"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Simon Dann",
+      "email": "simon.dann@gmail.com",
+      "homepage": "https://www.photogabble.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "5.7.*",
+    "orchestra/testbench": "~3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Photogabble\\LaravelRegistrationValidator\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Photogabble\\LaravelRegistrationValidator\\Tests\\": "tests/"
+    }
+  }
+}
