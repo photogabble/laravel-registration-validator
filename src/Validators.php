@@ -63,6 +63,12 @@ class Validators
      */
     public function validateConfusableEmail($attribute, $value, array $parameters, Validator $validator)
     {
+        if (! stristr($value, '@')){
+            return false;
+        }
+
+        $parts = explode('@', $value);
+
         return false;
         // @todo
     }
