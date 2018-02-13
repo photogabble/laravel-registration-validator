@@ -1,4 +1,9 @@
-# Laravel Registration Validator
+<h1 align="center">Laravel Registration Validator</h1>
+<p align="center"><em>Solid credential validation</em></p>
+
+<p align="center">
+  <a href="LICENSE"><img src="https://poser.pugx.org/photogabble/php-confusable-homoglyphs/license.svg" alt="License"></a>
+</p>
 
 > **NOTE** This project is currently a work in progress.
 
