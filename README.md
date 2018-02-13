@@ -1,5 +1,5 @@
 <h1 align="center">Laravel Registration Validator</h1>
-<p align="center"><em>Solid credential validation</em></p>
+<p align="center"><em>Solid credential validation for Laravel >= 5.5</em></p>
 
 <p align="center">
   <a href="LICENSE"><img src="https://poser.pugx.org/photogabble/php-confusable-homoglyphs/license.svg" alt="License"></a>
