@@ -2,6 +2,8 @@
 namespace Photogabble\LaravelRegistrationValidator;
 
 use Illuminate\Validation\Validator;
+use Photogabble\ConfusableHomoglyphs\Categories;
+use Photogabble\ConfusableHomoglyphs\Confusable;
 
 class Validators
 {
@@ -13,6 +15,7 @@ class Validators
      * @param string $value
      * @param array $parameters
      * @param Validator $validator
+     *
      * @return bool
      */
     public function validateNotReservedName($attribute, $value, array $parameters, Validator $validator)
@@ -46,12 +49,19 @@ class Validators
      * @param string $value
      * @param array $parameters
      * @param Validator $validator
+     * @throws \Exception
+     *
      * @return bool
      */
     public function validateConfusable($attribute, $value, array $parameters, Validator $validator)
     {
+        $confusable = (new Confusable(new Categories()))->isDangerous($value);
+
+        if ($confusable === false) {
+            return true;
+        }
+
         return false;
-        // @todo
     }
 
     /**
@@ -59,6 +69,8 @@ class Validators
      * @param string $value
      * @param array $parameters
      * @param Validator $validator
+     * @throws \Exception
+     *
      * @return bool
      */
     public function validateConfusableEmail($attribute, $value, array $parameters, Validator $validator)
@@ -68,8 +80,11 @@ class Validators
         }
 
         $parts = explode('@', $value);
+        $confusable = (new Confusable(new Categories()));
 
+        if ($confusable->isDangerous($parts[0]) === false && $confusable->isDangerous($parts[1]) === false) {
+            return true;
+        }
         return false;
-        // @todo
     }
 }
