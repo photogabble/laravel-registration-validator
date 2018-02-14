@@ -12,6 +12,10 @@ class ServiceProvider extends IlluminateServiceProvider
      */
     public function boot()
     {
+        $this->publishes([
+            __DIR__ . '/../config/registration-validation.php' => config_path('registration-validation.php')
+        ], 'config');
+
         /** @var \Illuminate\Validation\Factory $validator */
         $validator = $this->app->make('validator');
         $validator->extend('not_reserved_name', '\Photogabble\LaravelRegistrationValidator\Validators@validateNotReservedName');
@@ -27,7 +31,7 @@ class ServiceProvider extends IlluminateServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/Config/registration-validation.php', 'registration-validation'
+            __DIR__ . '/config/registration-validation.php', 'registration-validation'
         );
     }
 }

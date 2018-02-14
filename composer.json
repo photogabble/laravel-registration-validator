@@ -1,11 +1,12 @@
 {
   "name": "photogabble/laravel-registration-validator",
   "type": "library",
-  "description": "Laravel validation extensions for validating registration credentials.",
+  "description": "Solid credential validation for Laravel.",
   "keywords": [
     "laravel",
     "auth",
     "validation",
+    "registration",
     "credentials",
     "username",
     "email"

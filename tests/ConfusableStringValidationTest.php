@@ -23,6 +23,7 @@ class ConfusableStringValidationTest extends ValidationBase
         $this->assertTrue($this->validator->make(['email' => 'hello-world@example.com'], ['email' => 'not-confusable-email'])->passes());
         $this->assertFalse($this->validator->make(['email' => 'hello-world@faϲebook.com'], ['email' => 'not-confusable-email'])->passes());
         $this->assertFalse($this->validator->make(['email' => 'hello-world@Αpple.com'], ['email' => 'not-confusable-email'])->passes());
+        $this->assertFalse($this->validator->make(['email' => 'PhotoGabble'], ['email' => 'not-confusable-email'])->passes());
     }
 
 }
