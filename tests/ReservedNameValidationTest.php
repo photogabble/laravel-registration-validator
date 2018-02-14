@@ -11,6 +11,5 @@ class ReservedNameValidationTest extends ValidationBase
         $this->assertTrue($this->validator->make(['username' => 'photogabble'], ['username' => 'not-reserved-name'])->passes());
         $this->assertTrue($this->validator->make(['username' => 'hello-world'], ['username' => 'not-reserved-name'])->passes());
         $this->assertTrue($this->validator->make(['username' => 'hello.world'], ['username' => 'not-reserved-name'])->passes());
-
     }
 }
