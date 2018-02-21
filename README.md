@@ -2,9 +2,9 @@
 <p align="center"><em>Solid credential validation for Laravel >= 5.5</em></p>
 
 <p align="center">
-  <a href="https://travis-ci.org/photogabble/laravel-registration-validator"><img src="https://travis-ci.org/photogabble/laravel-registration-validator.svg?branch=master" alt="Build Status">
-  <a href="https://packagist.org/packages/photogabble/laravel-registration-validator"><img src="https://poser.pugx.org/photogabble/laravel-registration-validator/v/stable.svg" alt="Latest Stable Version"></a>
-  <a href="LICENSE"><img src="https://poser.pugx.org/photogabble/php-confusable-homoglyphs/license.svg" alt="License"></a>
+  <a href="https://travis-ci.org/photogabble/laravel-registration-validator"><img src="https://travis-ci.org/photogabble/laravel-registration-validator.svg?branch=master" alt="Build Status"></a>
+  <a href="https://packagist.org/packages/photogabble/laravel-registration-validator"><img src="https://img.shields.io/packagist/v/photogabble/laravel-registration-validator.svg" alt="Latest Stable Version"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/photogabble/laravel-registration-validator.svg" alt="License"></a>
 </p>
 
 ### About this package
